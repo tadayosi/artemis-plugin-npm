@@ -1,2 +1,8 @@
 # artemis-online
-Artemis integration with HawtIO Online
+
+
+##building
+
+mvn clean install
+
+npm?

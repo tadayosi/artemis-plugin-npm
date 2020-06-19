@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>org.apache.activemq</groupId>
+   <artifactId>artemis-plugin-npm</artifactId>
+   <version>0.1.0</version>
+   <packaging>pom</packaging>
+   <name>ActiveMQ Artemis HawtIO npm</name>
+
+   <properties>
+      <artemis.version>2.13.0-SNAPSHOT</artemis.version>
+   </properties>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.apache.activemq</groupId>
+         <artifactId>artemis-plugin</artifactId>
+         <version>${artemis.version}</version>
+         <type>war</type>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+               <execution>
+                  <id>unpack</id>
+                  <phase>prepare-package</phase>
+                  <goals>
+                     <goal>unpack</goal>
+                  </goals>
+                  <configuration>
+                     <artifactItems>
+                        <artifactItem>
+                           <groupId>org.apache.activemq</groupId>
+                           <artifactId>artemis-plugin</artifactId>
+                           <version>${artemis.version}</version>
+                           <type>war</type>
+                           <includes>**/*.js</includes>
+                           <outputDirectory>${project.build.directory}</outputDirectory>
+                        </artifactItem>
+                     </artifactItems>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+
+
+</project>
