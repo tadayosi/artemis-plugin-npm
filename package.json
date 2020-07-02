@@ -2,18 +2,22 @@
   "name": "artemis-plugin-npm",
   "version": "0.1.0",
   "description": "Artemis plugin module for the Hawtio web console",
-  "main": "dist/artemis-plugin.a3d30729.js",
+  "main": "dist/artemis-plugin.99629740.js",
   "scripts": {
     "prebuild": "echo 'removing dist' && rm -rf dist/ && echo 'downloading artemis-plugin.war' && mvn clean package",
-    "build": "parcel build --no-source-maps -o artemis-plugin.js target/plugin/**/**/*.js"
+    "build": "parcel build --no-source-maps -o artemis-plugin.js target/plugin/js/*.js target/plugin/js/**/*.js"
   },
   "devDependencies": {
     "parcel": "^1.12.4",
-    "parcel-plugin-concat": "^0.1.2"
+    "parcel-plugin-concat": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rh-messaging/artemis-plugin-npm.git"
   },
   "license": "Apache-2.0",
   "files": [
-    "$npm_package_main"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
