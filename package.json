@@ -11,9 +11,13 @@
     "parcel": "^1.12.4",
     "parcel-plugin-concat": "^0.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rh-messaging/artemis-plugin-npm.git"
+  },
   "license": "Apache-2.0",
   "files": [
-    "$npm_package_main"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
