@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "parcel": "^1.12.4",
-    "parcel-plugin-concat": "^0.1.2"
+    "parcel-plugin-concat": "^0.2.0"
   },
   "license": "Apache-2.0",
   "files": [
