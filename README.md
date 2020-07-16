@@ -23,7 +23,7 @@ This will download the artifact `org.apache.activemq:artemis-plugin` and unpack 
 Once build is successful, make sure to update the `main` field in `package.json` with the output file name under `dist/`, as the content hash changes at each build.
 
 ```json
-  "main": "dist/artemis-plugin.b3456c33.js",
+  "main": "dist/artemis-plugin.d0c8c95f.js",
 ```
 
 To publish the npm package, run the following command:
