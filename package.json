@@ -1,5 +1,5 @@
 {
-  "name": "artemis-plugin-npm",
+  "name": "@tadayosi/artemis-plugin-npm",
   "version": "1.0.0",
   "description": "Artemis plugin module for the Hawtio web console",
   "main": "dist/artemis-plugin.b6255d29.js",
