@@ -2,10 +2,11 @@
   "name": "artemis-plugin-npm",
   "version": "1.0.0",
   "description": "Artemis plugin module for the Hawtio web console",
-  "main": "dist/artemis-plugin.f367f2f5.js",
+  "main": "dist/artemis-plugin.js",
   "scripts": {
     "prebuild": "echo 'removing dist' && rm -rf dist/ && echo 'downloading artemis-plugin.war' && mvn clean package",
-    "build": "parcel build --no-source-maps -o artemis-plugin.js target/plugin/js/*.js target/plugin/js/**/*.js"
+    "build": "parcel build --no-content-hash --no-source-maps -o artemis-plugin.js target/plugin/js/*.js target/plugin/js/**/*.js",
+    "postbuild": "mv dist/artemis-plugin.c8a22af4.js $npm_package_main"
   },
   "devDependencies": {
     "parcel": "^1.12.4",
